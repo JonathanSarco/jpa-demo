@@ -1,0 +1,16 @@
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jpa-demo
+    username: postgres
+    password: postgres
+
+logging:
+  level:
+    root: info
+    org.hibernate.type: SQL
+    org:
+      hibernate:
+        type: TRACE
+        SQL: debug
+    nl.jonivan: DEBUG
