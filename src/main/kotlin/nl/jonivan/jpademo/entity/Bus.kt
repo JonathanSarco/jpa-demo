@@ -9,15 +9,14 @@ import java.util.*
 @Entity
 @DiscriminatorValue(value = TYPE)
 class Bus(
-    id: UUID,
-    brand: String,
+    override var id: UUID,
+    override var brand: String,
     @Column(name = "is_bus")
     val isBus: Boolean
 ): Vehicle(
     id = id,
     brand = brand
 ) {
-
     companion object {
         const val TYPE = "BUS"
     }
